@@ -1,0 +1,87 @@
+yarn add express
+
+yarn add sucrase nodemon -D
+
+yarn add eslint
+
+yarn eslint --init
+
+>> SELECIONE AS SEGUINTES OPÇÕES:
+
+How would you like to use ESLint?
+- To check syntax, find problems, and enforce code style
+
+What type of modules does your project use?
+- JavaScript modules (import/export)
+
+Which framework does your project use?
+- None of these
+
+Does your project use TypeScript?
+- No
+
+Where does your code run?
+- Node
+
+Use a popular style guide
+- Use a popular style guide
+
+Which style guide do you want to follow?
+- Airbnb (https://github.com/airbnb/javascript)
+
+What format do you want your config file to be in?
+- JavaScript
+
+Would you like to install them now with npm?
+- Yes
+
+Excluir o arquivo package-lock.json
+
+yarn
+
+yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+
+yarn eslint --fix src --ext .js
+
+
+Criar o arquivo .editorconfig na raiz do projeto e informar o seguinte código
+
+*********************************
+.editorconfig
+*********************************
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+*********************************
+
+yarn add sequelize
+yarn add sequelize-cli -D
+
+*********************************
+.sequelizerc
+*********************************
+const { resolve } = require('path');
+
+module.exports = {
+  config: resolve(__dirname, 'src', 'config', 'database.js'),
+  'models-path': resolve(__dirname, 'src', 'app', 'models'),
+  'migrations-path': resolve(__dirname, 'src', 'database', 'migrations'),
+  'seeders-path': resolve(__dirname, 'src', 'database', 'seeds'),
+};
+*********************************
+
+yarn add pg pg-hstore
+
+yarn add bcryptjs
+
+yarn add jsonwebtoken
+
+https://www.md5online.org/
+The MD5 hash for gympointrocketseatnodejs is : 46ab7708849d31de9c0eb8e6a360a737
+
+yarn add yup
