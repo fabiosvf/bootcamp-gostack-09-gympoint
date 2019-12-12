@@ -85,3 +85,58 @@ https://www.md5online.org/
 The MD5 hash for gympointrocketseatnodejs is : 46ab7708849d31de9c0eb8e6a360a737
 
 yarn add yup
+
+yarn add date-fns
+
+*********************************
+
+yarn sequelize migration:create --name=create-users
+yarn sequelize migration:create --name=create-students
+
+yarn sequelize db:migrate
+
+*********************************
+
+yarn sequelize seed:generate --name admin-user
+yarn sequelize db:seed:all
+
+*********************************
+
+yarn sequelize migration:create --name=create-plans
+yarn sequelize db:migrate
+
+*********************************
+
+yarn sequelize seed:generate --name insert-plans
+yarn sequelize db:seed --seed 20191206040701-insert-plans
+
+*********************************
+
+yarn sequelize migration:create --name=create-enrollments
+yarn sequelize db:migrate
+
+*********************************
+
+yarn add nodemailer
+
+yarn add express-handlebars nodemailer-express-handlebars
+
+docker run --name redisgympoint -p 6379:6379 -d -t redis:alpine
+
+yarn add bee-queue
+
+yarn add dotenv
+
+*********************************
+
+yarn sequelize migration:create --name=create-checkins
+yarn sequelize db:migrate
+
+Observação: Ao executar o ultimo comando, o sistema se perdeu com as variáveis de ambiente referente às configurações do banco de dados postgres. Tive que fixar os parametros manualmente para conseguir executar o comando
+
+*********************************
+
+yarn sequelize migration:create --name=create-help_orders
+yarn sequelize db:migrate
+
+*********************************
