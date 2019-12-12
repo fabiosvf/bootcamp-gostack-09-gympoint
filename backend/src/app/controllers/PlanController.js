@@ -16,6 +16,8 @@ class PlanController {
   }
 
   async store(req, res) {
+    const register = req.body;
+
     const schema = Yup.object().shape({
       title: Yup.string().required(),
       duration: Yup.number()
@@ -27,19 +29,19 @@ class PlanController {
         .positive(),
     });
 
-    if (!(await schema.isValid(req.body))) {
+    if (!(await schema.isValid(register))) {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
     const planExists = await Plan.findOne({
-      where: { title: req.body.title },
+      where: { title: register.title },
     });
 
     if (planExists) {
       return res.status(400).json({ error: 'Plan already exists.' });
     }
 
-    const { id, title, duration, price } = await Plan.create(req.body);
+    const { id, title, duration, price } = await Plan.create(register);
 
     return res.json({
       id,
@@ -50,6 +52,8 @@ class PlanController {
   }
 
   async update(req, res) {
+    const register = req.body;
+
     const schema = Yup.object().shape({
       title: Yup.string().required(),
       duration: Yup.number()
@@ -61,11 +65,11 @@ class PlanController {
         .positive(),
     });
 
-    if (!(await schema.isValid(req.body))) {
+    if (!(await schema.isValid(register))) {
       return res.status(400).json({ error: 'Validation fails' });
     }
 
-    const { title } = req.body;
+    const { title } = register;
 
     const plan = await Plan.findByPk(req.params.id);
 
@@ -77,7 +81,7 @@ class PlanController {
       }
     }
 
-    const { id, duration, price } = await plan.update(req.body);
+    const { id, duration, price } = await plan.update(register);
 
     return res.json({
       id,
@@ -88,7 +92,9 @@ class PlanController {
   }
 
   async delete(req, res) {
-    const plan = await Plan.findByPk(req.params.id);
+    const { id } = req.params;
+
+    const plan = await Plan.findByPk(id);
 
     if (plan == null) {
       return res.status(400).json({ error: 'Plan does not exists' });
