@@ -26,7 +26,7 @@ class EnrollmentController {
 
     const enrollments = await Enrollment.findAll({
       order: ['start_date'],
-      attributes: ['id', 'start_date', 'end_date', 'price'],
+      attributes: ['id', 'start_date', 'end_date', 'price', 'active'],
       limit: 20,
       offset: (page - 1) * 20,
       include: [
@@ -105,7 +105,7 @@ class EnrollmentController {
     const { id } = await Enrollment.create(register);
 
     const enrollment = await Enrollment.findByPk(id, {
-      attributes: ['id', 'start_date', 'end_date', 'price'],
+      attributes: ['id', 'start_date', 'end_date', 'price', 'active'],
       include: [
         {
           model: Student,
