@@ -8,7 +8,7 @@ import { Container } from './styles';
 export default function DefaultLayout({ children }) {
   return (
     <Container>
-      <Header />
+      <Header children={children} />
       {children}
     </Container>
   );
