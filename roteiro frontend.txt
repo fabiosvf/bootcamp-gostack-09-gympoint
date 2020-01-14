@@ -120,8 +120,11 @@ module.exports = {
 yarn add react-router-dom
 yarn add styled-components polished
 yarn add prop-types
+yarn add history-prop-types
 
 ********************************************************
 
 yarn add @rocketseat/unform
+
+yarn add react-icons
 
