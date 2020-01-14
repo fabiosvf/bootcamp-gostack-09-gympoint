@@ -26,8 +26,10 @@ export default function Header({ children }) {
           <StyledLink
             key={m.url}
             to={m.url}
-            selected={urlCurrent.includes(m.url) > 0}
-            editmode={urlCurrent !== m.url}
+            selected={String(urlCurrent.includes(m.url) > 0 ? 1 : 0)}
+            editmode={String(
+              urlCurrent.includes(m.url) > 0 && urlCurrent !== m.url ? 1 : 0
+            )}
           >
             {m.title}
           </StyledLink>

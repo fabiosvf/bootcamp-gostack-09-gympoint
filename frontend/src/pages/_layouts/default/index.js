@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import Header from '../../../components/Header';
 
-import { Container } from './styles';
+import { Container, Main } from './styles';
 
 export default function DefaultLayout({ children }) {
   return (
     <Container>
       <Header children={children} />
-      {children}
+      <Main>{children}</Main>
     </Container>
   );
 }

@@ -28,7 +28,11 @@ export const StyledLink = styled(Link)`
   font-weight: bold;
   font-size: 15;
   color: ${props =>
-    props.selected ? (props.editmode ? '#ee4d64' : '#444') : '#999'};
+    props.selected === '1'
+      ? props.editmode === '1'
+        ? '#ee4d64'
+        : '#444'
+      : '#999'};
 `;
 
 export const Profile = styled.div`
