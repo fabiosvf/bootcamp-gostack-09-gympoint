@@ -20,18 +20,26 @@ import {
   LinkEdit,
   LinkDelete,
 } from './styles';
-import { Button } from '../_layouts/default/styles';
+
+import ButtonIcon from '../../components/ButtonIcon';
 
 export default function Student({ history }) {
+  function handleCadastrar() {
+    history.push('/student/register');
+  }
+
   return (
     <Container>
       <Header>
         <span>Gerenciando alunos</span>
         <Search>
-          <Button onClick={() => history.push('/student/register')}>
-            <MdAdd size={16} color="#fff" />
-            <span>CADASTRAR</span>
-          </Button>
+          <ButtonIcon
+            icon={MdAdd}
+            type="button"
+            title="CADASTRAR"
+            confirmed
+            onClick={handleCadastrar}
+          />
           <InputIconText icon={MdSearch} placeholder="Buscar aluno" />
         </Search>
       </Header>

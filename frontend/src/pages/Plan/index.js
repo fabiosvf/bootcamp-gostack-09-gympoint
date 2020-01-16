@@ -20,18 +20,26 @@ import {
   LinkEdit,
   LinkDelete,
 } from './styles';
-import { Button } from '../_layouts/default/styles';
+
+import ButtonIcon from '../../components/ButtonIcon';
 
 export default function Plan({ history }) {
+  function handleCadastrar() {
+    history.push('/plan/register');
+  }
+
   return (
     <Container>
       <Header>
         <span>Gerenciando planos</span>
         <Aside>
-          <Button onClick={() => history.push('/plan/register')}>
-            <MdAdd size={16} color="#fff" />
-            <span>CADASTRAR</span>
-          </Button>
+          <ButtonIcon
+            icon={MdAdd}
+            type="button"
+            title="CADASTRAR"
+            confirmed
+            onClick={handleCadastrar}
+          />
         </Aside>
       </Header>
 
