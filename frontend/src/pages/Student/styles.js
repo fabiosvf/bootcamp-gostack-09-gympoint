@@ -33,6 +33,7 @@ export const Search = styled.div`
 
 export const Grid = styled.div`
   background: #fff;
+  border-radius: 4px;
   display: grid;
   /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: 4fr 4fr 2fr 2fr;

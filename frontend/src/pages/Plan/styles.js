@@ -32,8 +32,8 @@ export const Aside = styled.aside`
 
 export const Grid = styled.div`
   background: #fff;
+  border-radius: 4px;
   display: grid;
-  /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: 3fr 3fr 3fr 3fr;
   padding: 10px;
 
