@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Container } from './styles';
+import { Container, InputText } from './styles';
 
-export default function InputTextLabel({ label, placeholder }) {
+export default function InputTextLabel({ label, placeholder, disabled }) {
   return (
     <Container>
       <span>{label}</span>
-      <input type="text" placeholder={placeholder} />
+      <InputText placeholder={placeholder} disabled={disabled} />
     </Container>
   );
 }
