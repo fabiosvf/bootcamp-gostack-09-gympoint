@@ -18,7 +18,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-select": "^3.0.8",
-    "styled-components": "^4.4.1"
+    "styled-components": "^4.4.1",
+    "styled-react-modal": "^2.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

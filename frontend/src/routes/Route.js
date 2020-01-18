@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
+import { ModalProvider } from 'styled-react-modal';
 
 import AuthLayout from '../pages/_layouts/auth';
 import DefaultLayout from '../pages/_layouts/default';
@@ -24,9 +25,11 @@ export default function RouteWrapper({
     <Route
       {...rest}
       render={props => (
-        <Layout>
-          <Component {...props} />
-        </Layout>
+        <ModalProvider>
+          <Layout>
+            <Component {...props} />
+          </Layout>
+        </ModalProvider>
       )}
     />
   );

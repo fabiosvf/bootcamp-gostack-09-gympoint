@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   Container,
@@ -11,7 +11,15 @@ import {
   LinkAnswer,
 } from './styles';
 
+import ModalAnswer from '../../components/ModalAnswer';
+
 export default function HelpOrder() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function toggleModal(e) {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <Container>
       <Header>
@@ -23,37 +31,39 @@ export default function HelpOrder() {
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer to="/">responder</LinkAnswer>
+          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer to="/">responder</LinkAnswer>
+          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer to="/">responder</LinkAnswer>
+          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer to="/">responder</LinkAnswer>
+          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer to="/">responder</LinkAnswer>
+          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
         </DetailCommand>
       </Grid>
+
+      <ModalAnswer isOpen={isOpen} setIsOpen={setIsOpen} />
     </Container>
   );
 }

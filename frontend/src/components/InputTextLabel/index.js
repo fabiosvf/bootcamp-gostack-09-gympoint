@@ -15,9 +15,11 @@ export default function InputTextLabel({ label, placeholder, disabled }) {
 InputTextLabel.propTypes = {
   label: PropTypes.string,
   placeholder: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 InputTextLabel.defaultProps = {
   label: null,
   placeholder: null,
+  disabled: false,
 };
