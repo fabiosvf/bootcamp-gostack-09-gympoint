@@ -128,3 +128,44 @@ yarn add @rocketseat/unform
 
 yarn add react-icons
 
+********************************************************
+
+yarn add react-select
+
+https://react-select.com/styles
+
+********************************************************
+
+https://www.npmjs.com/package/react-input-mask
+https://text-mask.github.io/text-mask/
+
+********************************************************
+
+yarn add react-datepicker
+yarn add date-fns
+
+https://www.npmjs.com/package/react-datepicker
+https://reactdatepicker.com/
+https://github.com/Hacker0x01/react-datepicker/blob/master/docs/datepicker.md
+https://github.com/Hacker0x01/react-datepicker
+
+https://tresko.dev/yet-another-datepicker-in-react
+
+********************************************************
+
+yarn add react-modal
+
+https://github.com/reactjs/react-modal
+https://codepen.io/claydiffrient/pen/KNjVrG
+
+
+
+yarn add styled-react-modal
+
+https://codesandbox.io/s/m9jlky57y
+
+
+Modal na raça
+https://medium.com/code-prestige/usando-os-portais-do-react-para-criar-modais-mais-pr%C3%A1ticos-fe1db6ab68f2
+
+********************************************************
