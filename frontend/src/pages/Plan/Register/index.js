@@ -16,6 +16,7 @@ import {
 
 import ButtonIcon from '../../../components/ButtonIcon';
 import InputTextLabel from '../../../components/InputTextLabel';
+import InputMaskNumberLabel from '../../../components/InputMaskNumberLabel';
 
 export default function Register({ history }) {
   function handleVoltar() {
@@ -49,10 +50,19 @@ export default function Register({ history }) {
             <InputTextLabel label="TÍTULO DO PLANO" />
           </FieldTitle>
           <FieldDuration>
-            <InputTextLabel label="DURAÇÃO (EM MESES)" />
+            <InputMaskNumberLabel
+              maskOptions={{ allowDecimal: false, integerLimit: 2 }}
+              label="DURAÇÃO (EM MESES)"
+            />
           </FieldDuration>
           <FieldPrice>
-            <InputTextLabel label="PREÇO MENSAL" />
+            <InputMaskNumberLabel
+              maskOptions={{
+                decimalLimit: 2,
+                prefix: 'R$ ',
+              }}
+              label="PREÇO MENSAL"
+            />
           </FieldPrice>
           <FieldTotal>
             <InputTextLabel label="PREÇO TOTAL" disabled />

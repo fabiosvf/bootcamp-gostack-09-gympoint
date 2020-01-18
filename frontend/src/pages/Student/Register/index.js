@@ -17,6 +17,7 @@ import {
 
 import ButtonIcon from '../../../components/ButtonIcon';
 import InputTextLabel from '../../../components/InputTextLabel';
+import InputMaskNumberLabel from '../../../components/InputMaskNumberLabel';
 
 export default function Register({ history }) {
   function handleVoltar() {
@@ -53,13 +54,32 @@ export default function Register({ history }) {
             <InputTextLabel label="ENDEREÇO DE E-MAIL" />
           </FieldEmail>
           <FieldAge>
-            <InputTextLabel label="IDADE" />
+            <InputMaskNumberLabel
+              maskOptions={{ allowDecimal: false, integerLimit: 2 }}
+              label="IDADE"
+            />
           </FieldAge>
           <FieldWeight>
-            <InputTextLabel label="PESO (EM KG)" />
+            <InputMaskNumberLabel
+              maskOptions={{
+                allowDecimal: true,
+                integerLimit: 2,
+                decimalLimit: 1,
+                suffix: 'kg',
+              }}
+              label="PESO (EM KG)"
+            />
           </FieldWeight>
           <FieldHeight>
-            <InputTextLabel label="ALTURA" />
+            <InputMaskNumberLabel
+              maskOptions={{
+                allowDecimal: true,
+                integerLimit: 1,
+                decimalLimit: 2,
+                suffix: 'm',
+              }}
+              label="ALTURA (EM MTS)"
+            />
           </FieldHeight>
         </Fields>
       </form>
