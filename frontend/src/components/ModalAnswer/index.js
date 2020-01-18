@@ -26,9 +26,7 @@ export default function ModalAnswer({ isOpen, setIsOpen }) {
       <TextLabel label="PERGUNTA DO ALUNO" text={question} />
 
       <br />
-      <InputTextAreaLabel label="SUA RESPOSTA" rows={6}>
-        {answer}
-      </InputTextAreaLabel>
+      <InputTextAreaLabel label="SUA RESPOSTA" rows={6} defaultValue={answer} />
 
       <br />
       <ButtonOne

@@ -16,6 +16,7 @@ export const InputTextArea = styled.textarea.attrs(props => ({
   placeholder: props.placeholder,
   disabled: props.disabled,
   rows: props.rows,
+  defaultValue: props.defaultValue,
 }))`
   border: 1px solid #ddd;
   border-radius: 4px;

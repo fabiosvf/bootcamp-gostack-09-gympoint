@@ -31,35 +31,45 @@ export default function HelpOrder() {
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
+          <LinkAnswer to="#" onClick={toggleModal}>
+            responder
+          </LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
+          <LinkAnswer to="#" onClick={toggleModal}>
+            responder
+          </LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
+          <LinkAnswer to="#" onClick={toggleModal}>
+            responder
+          </LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
+          <LinkAnswer to="#" onClick={toggleModal}>
+            responder
+          </LinkAnswer>
         </DetailCommand>
 
         <GridSeparator />
 
         <DetailStudent>Shen Zhi</DetailStudent>
         <DetailCommand>
-          <LinkAnswer onClick={toggleModal}>responder</LinkAnswer>
+          <LinkAnswer to="#" onClick={toggleModal}>
+            responder
+          </LinkAnswer>
         </DetailCommand>
       </Grid>
 

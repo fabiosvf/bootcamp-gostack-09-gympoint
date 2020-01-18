@@ -19,7 +19,7 @@ export default function ButtonIcon({
 }
 
 ButtonIcon.propTypes = {
-  icon: PropTypes.element,
+  icon: PropTypes.func,
   type: PropTypes.string,
   title: PropTypes.string,
   confirmed: PropTypes.bool,

@@ -24,7 +24,6 @@ export const Header = styled.header`
 export const Grid = styled.div`
   background: #fff;
   display: grid;
-  /* grid-template-columns: auto auto auto auto; */
   grid-template-columns: 3fr 1fr;
   padding: 10px;
 

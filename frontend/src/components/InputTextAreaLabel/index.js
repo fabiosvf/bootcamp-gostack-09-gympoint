@@ -8,14 +8,17 @@ export default function InputTextAreaLabel({
   placeholder,
   disabled,
   rows,
-  children,
+  defaultValue,
 }) {
   return (
     <Container>
       <span>{label}</span>
-      <InputTextArea placeholder={placeholder} disabled={disabled} rows={rows}>
-        {children}
-      </InputTextArea>
+      <InputTextArea
+        placeholder={placeholder}
+        disabled={disabled}
+        rows={rows}
+        defaultValue={defaultValue}
+      />
     </Container>
   );
 }
@@ -25,7 +28,7 @@ InputTextAreaLabel.propTypes = {
   placeholder: PropTypes.string,
   disabled: PropTypes.bool,
   rows: PropTypes.number,
-  children: PropTypes.string,
+  defaultValue: PropTypes.string,
 };
 
 InputTextAreaLabel.defaultProps = {
@@ -33,5 +36,5 @@ InputTextAreaLabel.defaultProps = {
   placeholder: null,
   disabled: false,
   rows: 0,
-  children: null,
+  defaultValue: null,
 };
