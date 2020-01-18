@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { history as historyPropTypes } from 'history-prop-types';
 
@@ -21,6 +21,8 @@ import SelectLabel from '../../../components/SelectLabel';
 import DatePickerLabel from '../../../components/DatePickerLabel';
 
 export default function Update({ history }) {
+  const [startDate, setStartDate] = useState(new Date());
+
   function handleVoltar() {
     history.goBack();
   }
@@ -41,9 +43,6 @@ export default function Update({ history }) {
     { value: 2, label: 'Maria' },
     { value: 3, label: 'Daniel' },
   ];
-
-  const startDate = new Date();
-  const setStartDate = date => {};
 
   return (
     <Container>
@@ -81,7 +80,7 @@ export default function Update({ history }) {
             <DatePickerLabel
               label="DATA DE INÍCIO"
               selected={startDate}
-              onChange={setStartDate(startDate)}
+              onChange={date => setStartDate(date)}
             />
           </FieldStartDate>
           <FieldEndDate>
