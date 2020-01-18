@@ -18,6 +18,7 @@ import {
 import ButtonIcon from '../../../components/ButtonIcon';
 import InputTextLabel from '../../../components/InputTextLabel';
 import SelectLabel from '../../../components/SelectLabel';
+import DatePickerLabel from '../../../components/DatePickerLabel';
 
 export default function Register({ history }) {
   function handleVoltar() {
@@ -40,6 +41,9 @@ export default function Register({ history }) {
     { value: 2, label: 'Maria' },
     { value: 3, label: 'Daniel' },
   ];
+
+  const startDate = new Date();
+  const setStartDate = date => {};
 
   return (
     <Container>
@@ -74,7 +78,11 @@ export default function Register({ history }) {
             />
           </FieldPlan>
           <FieldStartDate>
-            <InputTextLabel label="DATA DE INÍCIO" />
+            <DatePickerLabel
+              label="DATA DE INÍCIO"
+              selected={startDate}
+              onChange={setStartDate(startDate)}
+            />
           </FieldStartDate>
           <FieldEndDate>
             <InputTextLabel label="DATA DE TÉRMINO" disabled />

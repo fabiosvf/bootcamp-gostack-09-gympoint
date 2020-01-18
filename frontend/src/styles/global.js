@@ -1,7 +1,9 @@
 import { createGlobalStyle } from 'styled-components';
+import 'react-datepicker/dist/react-datepicker.css';
 
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/* @import 'react-datepicker/dist/react-datepicker.css'; */
 
 * {
   margin: 0;

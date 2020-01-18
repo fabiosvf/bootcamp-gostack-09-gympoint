@@ -105,7 +105,7 @@ export const DetailCommand = styled.div`
 `;
 
 export const GridSeparator = styled.hr`
-  border: 0.7px solid #eee;
+  border-top: 0.5px solid #eee;
   grid-column-start: 1;
   grid-column-end: 7;
 `;
