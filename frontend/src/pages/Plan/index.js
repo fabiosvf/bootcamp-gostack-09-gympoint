@@ -21,7 +21,7 @@ import {
   LinkDelete,
 } from './styles';
 
-import ButtonIcon from '../../components/ButtonIcon';
+import ButtonIcon from '~/components/ButtonIcon';
 
 export default function Plan({ history }) {
   function handleCadastrar() {

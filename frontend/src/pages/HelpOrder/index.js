@@ -11,12 +11,12 @@ import {
   LinkAnswer,
 } from './styles';
 
-import ModalAnswer from '../../components/ModalAnswer';
+import ModalAnswer from '~/components/ModalAnswer';
 
 export default function HelpOrder() {
   const [isOpen, setIsOpen] = useState(false);
 
-  function toggleModal(e) {
+  function toggleModal() {
     setIsOpen(!isOpen);
   }
 

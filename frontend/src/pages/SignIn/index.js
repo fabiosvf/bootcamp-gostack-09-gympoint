@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { history as historyPropTypes } from 'history-prop-types';
 
-import logo from '../../assets/logo.svg';
+import logo from '~/assets/logo.svg';
 
 export default function SignIn({ history }) {
   return (
@@ -19,3 +21,11 @@ export default function SignIn({ history }) {
     </>
   );
 }
+
+SignIn.propTypes = {
+  history: PropTypes.shape(historyPropTypes),
+};
+
+SignIn.defaultProps = {
+  history: null,
+};

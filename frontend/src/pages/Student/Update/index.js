@@ -15,9 +15,9 @@ import {
   FieldHeight,
 } from './styles';
 
-import ButtonIcon from '../../../components/ButtonIcon';
-import InputTextLabel from '../../../components/InputTextLabel';
-import InputMaskNumberLabel from '../../../components/InputMaskNumberLabel';
+import ButtonIcon from '~/components/ButtonIcon';
+import InputTextLabel from '~/components/InputTextLabel';
+import InputMaskNumberLabel from '~/components/InputMaskNumberLabel';
 
 export default function Update({ history }) {
   function handleVoltar() {

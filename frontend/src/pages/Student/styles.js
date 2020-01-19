@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import InputIconTextStyled from '../../components/InputIconText';
+import InputIconTextStyled from '~/components/InputIconText';
 
 export const Container = styled.div`
   display: flex;

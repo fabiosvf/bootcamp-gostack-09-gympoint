@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import { StyledModal } from './styles';
 
-import TextLabel from '../TextLabel';
-import InputTextAreaLabel from '../InputTextAreaLabel';
-import ButtonOne from '../ButtonOne';
+import TextLabel from '~/components/TextLabel';
+import InputTextAreaLabel from '~/components/InputTextAreaLabel';
+import ButtonOne from '~/components/ButtonOne';
 
 export default function ModalAnswer({ isOpen, setIsOpen }) {
   const question = `
@@ -17,7 +17,7 @@ export default function ModalAnswer({ isOpen, setIsOpen }) {
 
   const answer = `Olá pessoal da academia, gostaria de saber se quando acordar devo ingerir batata doce e frango logo de primeira, preparar as marmitas e lotar a geladeira? Dou um pico de insulina e jogo o hipercalórico?`;
 
-  function toggleModal(e) {
+  function toggleModal() {
     setIsOpen(!isOpen);
   }
 

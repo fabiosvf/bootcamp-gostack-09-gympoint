@@ -15,10 +15,10 @@ import {
   FieldEndValue,
 } from './styles';
 
-import ButtonIcon from '../../../components/ButtonIcon';
-import InputTextLabel from '../../../components/InputTextLabel';
-import SelectLabel from '../../../components/SelectLabel';
-import DatePickerLabel from '../../../components/DatePickerLabel';
+import ButtonIcon from '~/components/ButtonIcon';
+import InputTextLabel from '~/components/InputTextLabel';
+import SelectLabel from '~/components/SelectLabel';
+import DatePickerLabel from '~/components/DatePickerLabel';
 
 export default function Update({ history }) {
   const [startDate, setStartDate] = useState(new Date());

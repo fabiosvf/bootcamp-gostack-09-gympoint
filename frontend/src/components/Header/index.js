@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container, VerticalRow, StyledLink, Profile } from './styles';
 
-import logo from '../../assets/logo-header.svg';
+import logo from '~/assets/logo-header.svg';
 
 export default function Header({ children }) {
   const urlCurrent = children.props.match.url;
